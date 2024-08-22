@@ -50,4 +50,25 @@ asyncio.run(main())
 # FineTuningJob(id='ftjob-uwTC0Z5FZb42OKAPheCbHF2k', created_at=1724347360, error=Error(code=None, message=None, param=None), fine_tuned_model=None, finished_at=None, hyperparameters=Hyperparameters(n_epochs='auto', batch_size='auto', learning_rate_multiplier='auto'), model='gpt-4o-mini-2024-07-18', object='fine_tuning.job', organization_id='org-0hI4vtfrSaFsHmuE2k55ImHb', result_files=[], seed=406982310, status='validating_files', trained_tokens=None, training_file='file-nzrtkKyIv3lDfBR78bqODYKn', validation_file=None, estimated_finish=None, integrations=[], user_provided_suffix=None)
 
 # TUNING STATUS OUTPUT:
-# FineTuningJob(id='ftjob-uwTC0Z5FZb42OKAPheCbHF2k', created_at=1724347360, error=Error(code=None, message=None, param=None), fine_tuned_model='ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b', finished_at=1724347783, hyperparameters=Hyperparameters(n_epochs=4, batch_size=1, learning_rate_multiplier=1.8), model='gpt-4o-mini-2024-07-18', object='fine_tuning.job', organization_id='org-0hI4vtfrSaFsHmuE2k55ImHb', result_files=['file-ScJQ4jFxtamu2EJ2COAMIjtP'], seed=406982310, status='succeeded', trained_tokens=6104, training_file='file-nzrtkKyIv3lDfBR78bqODYKn', validation_file=None, estimated_finish=None, integrations=[], user_provided_suffix=None)
+'''
+FineTuningJob(
+  id='ftjob-uwTC0Z5FZb42OKAPheCbHF2k', 
+  created_at=1724347360, 
+  error=Error(code=None, message=None, param=None),
+  fine_tuned_model='ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b', 
+  finished_at=1724347783, 
+  hyperparameters=Hyperparameters(n_epochs=4, batch_size=1, learning_rate_multiplier=1.8), 
+  model='gpt-4o-mini-2024-07-18', 
+  object='fine_tuning.job', 
+  organization_id='org-0hI4vtfrSaFsHmuE2k55ImHb', 
+  result_files=['file-ScJQ4jFxtamu2EJ2COAMIjtP'], 
+  seed=406982310, 
+  status='succeeded', 
+  trained_tokens=6104, 
+  training_file='file-nzrtkKyIv3lDfBR78bqODYKn', 
+  validation_file=None, 
+  estimated_finish=None, 
+  integrations=[], 
+  user_provided_suffix=None
+)
+'''
