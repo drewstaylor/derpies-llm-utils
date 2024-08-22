@@ -9,6 +9,8 @@ client = AsyncOpenAI(
     api_key=os.environ.get('OPENAI_API_KEY'),
 )
 
+suffix = " Your response should be silly and sassy."
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -29,7 +31,7 @@ async def ask(prompt) -> None:
         messages=[
             {
                 "role": "user",
-                "content": prompt,
+                "content": prompt + suffix,
             }
         ],
         model="ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b",
