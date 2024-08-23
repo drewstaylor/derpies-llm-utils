@@ -211,4 +211,4 @@ What would you like to know?
 ('x' to exit)
 
 x
-lsd@lsd:~/work/archway/token-launches/derpies/personal-assistant/openai/gpt-4o-mini * main$
+$
