@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import asyncio
 from dotenv import load_dotenv
@@ -8,6 +10,8 @@ load_dotenv()
 client = AsyncOpenAI(
     api_key=os.environ.get('OPENAI_API_KEY'),
 )
+
+model = os.environ.get('OPENAI_MODEL')
 
 suffix = " Your response should be silly and sassy."
 
