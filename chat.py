@@ -38,7 +38,7 @@ async def ask(prompt) -> None:
                 "content": prompt + suffix,
             }
         ],
-        model="ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b",
+        model=model,
         stream=True,
     )
 
