@@ -72,6 +72,6 @@ async def main():
     elif command == "status":
         await fetch_fine_tuning_status(value)
     else:
-        raise ValueError("Command not found " + command + ". Possible commands are: 'upload', 'tune', 'status'")
+        raise ValueError("Command not found \"" + command + "\". Possible commands are: \"upload\", \"tune\", \"status\"")
 
 asyncio.run(main())
