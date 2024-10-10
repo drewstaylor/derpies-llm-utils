@@ -52,9 +52,9 @@ Usage:
 
 Available Commands:
 
-upload [file path]   Upload a training file at the specified file path. Returns a file ID.
+upload [file path]   Upload a training file at the specified path. Returns a file ID.
 tune [file id]       Queues a job for training / tuning. Returns a job ID.
-status [job id]      Fetches the status of a tuning job. Returns a model ID if tuning job completed.
+status [job id]      Fetches the status of a tuning job. Returns a model ID if training completed.
 help                 Print this help message
 ```
 
