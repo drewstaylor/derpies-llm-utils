@@ -64,13 +64,23 @@ async def fetch_fine_tuning_status(job) -> None:
 
 async def main():
     command = sys.argv[1]
-    value = sys.argv[2]
+    if len(sys.argv) > 2:
+        value = sys.argv[2]
     if command == "upload":
         await upload_training_data(value)
     elif command == "tune":
         await create_fine_tuning(value)
     elif command == "status":
         await fetch_fine_tuning_status(value)
+    elif command == "help":
+        print("Usage:")
+        print("./training.py [command] [arg]\n")
+        print("Available Commands:\n")
+        print("upload [file path]   Upload a training file at the specified file path. Returns a file ID.")
+        print("tune [file id]       Queues a job for training / tuning. Returns a job ID.")
+        print("status [job id]      Fetches the status of a tuning job. Returns a model ID if tuning job completed.")
+        print("help                 Prints this help message")
+
     else:
         raise ValueError("Command not found \"" + command + "\". Possible commands are: \"upload\", \"tune\", \"status\"")
 
