@@ -61,8 +61,18 @@ async def fetch_fine_tuning_status(job) -> None:
     print(ft, '\n')
     print('Fine tuning status checked successfully')
 
+def help():
+    print("Usage:")
+    print("./training.py [command] [arg]\n")
+    print("Available Commands:\n")
+    print("upload [file path]   Upload a training file at the specified path. Returns a file ID.")
+    print("tune [file id]       Queues a training / tuning job. Returns a job ID.")
+    print("status [job id]      Fetches the status of a tuning job. Returns a model ID if training completed.")
+    print("help                 Print this help message")
 
 async def main():
+    if len(sys.argv) <= 1:
+        return help()
     command = sys.argv[1]
     if len(sys.argv) > 2:
         value = sys.argv[2]
@@ -73,15 +83,9 @@ async def main():
     elif command == "status":
         await fetch_fine_tuning_status(value)
     elif command == "help":
-        print("Usage:")
-        print("./training.py [command] [arg]\n")
-        print("Available Commands:\n")
-        print("upload [file path]   Upload a training file at the specified file path. Returns a file ID.")
-        print("tune [file id]       Queues a job for training / tuning. Returns a job ID.")
-        print("status [job id]      Fetches the status of a tuning job. Returns a model ID if tuning job completed.")
-        print("help                 Print this help message")
+        help()
 
     else:
-        raise ValueError("Command not found \"" + command + "\". Possible commands are: \"upload\", \"tune\", \"status\"")
+        raise ValueError("Command not found \"" + command + "\". Possible commands are: \"upload\", \"tune\", \"status\". \"help\"")
 
 asyncio.run(main())
