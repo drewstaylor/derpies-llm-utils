@@ -126,7 +126,8 @@ Response example
 FineTuningJob(
     id='ftjob-uwTC0Z5FZb42OKAPheCbHF2k',
     created_at=1724347360, 
-    error=Error(code=None, message=None, param=None), fine_tuned_model='ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b', # Output model ID (training result)
+    error=Error(code=None, message=None, param=None),
+    fine_tuned_model='ft:gpt-4o-mini-2024-07-18:personal::9z5uyT9b', # Output model ID (training result)
     finished_at=1724347783, 
     hyperparameters=Hyperparameters(
         n_epochs=4, 
