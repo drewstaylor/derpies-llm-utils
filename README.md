@@ -38,6 +38,26 @@ OPENAI_TRAINING_MODEL="gpt-4o-mini-2024-07-18"
 3. Queue a training job (returns a job id)
 4. Fetch the status of a job id (returns a custom model if job is completed)
 
+#### Running the `help` Command
+
+Command example
+```bash
+./training.py help
+```
+
+Response example
+```bash
+Usage:
+./training.py [command] [arg]
+
+Available Commands:
+
+upload [file path]   Upload a training file at the specified file path. Returns a file ID.
+tune [file id]       Queues a job for training / tuning. Returns a job ID.
+status [job id]      Fetches the status of a tuning job. Returns a model ID if tuning job completed.
+help                 Print this help message
+```
+
 #### Uploading Training Data
 
 Request example

@@ -79,7 +79,7 @@ async def main():
         print("upload [file path]   Upload a training file at the specified file path. Returns a file ID.")
         print("tune [file id]       Queues a job for training / tuning. Returns a job ID.")
         print("status [job id]      Fetches the status of a tuning job. Returns a model ID if tuning job completed.")
-        print("help                 Prints this help message")
+        print("help                 Print this help message")
 
     else:
         raise ValueError("Command not found \"" + command + "\". Possible commands are: \"upload\", \"tune\", \"status\"")
