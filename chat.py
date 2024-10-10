@@ -66,7 +66,7 @@ async def ask(prompt) -> None:
 # Export log
 def export():
     timestamp = int(time.time())
-    file = data_dir + str(timestamp) + log_suffix
+    file = data_dir + str(timestamp) + "-" + model +  log_suffix
     
     with open(file, 'w') as f:
         json.dump(chat_history, f)
