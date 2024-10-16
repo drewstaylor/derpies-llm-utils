@@ -52,10 +52,22 @@ Usage:
 
 Available Commands:
 
-upload [file path]   Upload a training file at the specified path. Returns a file ID.
-tune [file id]       Queues a job for training / tuning. Returns a job ID.
-status [job id]      Fetches the status of a tuning job. Returns a model ID if training completed.
-help                 Print this help message
+moderation [file path]  Check if a training file doesn't violate moderation filters.
+upload [file path]      Upload a training file at the specified path. Returns a file ID.
+tune [file id]          Queues a job for training / tuning. Returns a job ID.
+status [job id]         Fetches the status of a tuning job. Returns a model ID if training completed.
+help                    Print this help message
+```
+
+#### Checking Training Does Not Violate Moderation Filters
+Request example
+```bash
+./training.py moderation "data/default-08-22-2024.jsonl"
+```
+
+Response example
+```bash
+ModerationCreateResponse(id='modr-9d6a9a4050ce03fcabc5459faa9ed4ac', model='omni-moderation-latest', results=[Moderation(categories=Categories(harassment=False, harassment_threatening=False, hate=False, hate_threatening=False, self_harm=False, self_harm_instructions=False, self_harm_intent=False, sexual=False, sexual_minors=False, violence=False, violence_graphic=False, harassment/threatening=False, hate/threatening=False, illicit=False, illicit/violent=False, self-harm/intent=False, self-harm/instructions=False, self-harm=False, sexual/minors=False, violence/graphic=False), category_scores=CategoryScores(harassment=0.01970237400537813, harassment_threatening=0.0008097716541842735, hate=0.00015011822567369918, hate_threatening=6.814872211615988e-06, self_harm=0.0005011211542112085, self_harm_instructions=0.00022690684744977127, self_harm_intent=0.000249784072058715, sexual=0.3738115514626793, sexual_minors=0.001098694263059318, violence=0.0006001064513491806, violence_graphic=8.092757566536092e-06, harassment/threatening=0.0008097716541842735, hate/threatening=6.814872211615988e-06, illicit=0.0038130026525290957, illicit/violent=1.7130819343483194e-05, self-harm/intent=0.000249784072058715, self-harm/instructions=0.00022690684744977127, self-harm=0.0005011211542112085, sexual/minors=0.001098694263059318, violence/graphic=8.092757566536092e-06), flagged=False, category_applied_input_types={'harassment': ['text'], 'harassment/threatening': ['text'], 'sexual': ['text'], 'hate': ['text'], 'hate/threatening': ['text'], 'illicit': ['text'], 'illicit/violent': ['text'], 'self-harm/intent': ['text'], 'self-harm/instructions': ['text'], 'self-harm': ['text'], 'sexual/minors': ['text'], 'violence': ['text'], 'violence/graphic': ['text']})])
 ```
 
 #### Uploading Training Data
