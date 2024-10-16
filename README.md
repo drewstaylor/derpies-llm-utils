@@ -52,10 +52,11 @@ Usage:
 
 Available Commands:
 
-upload [file path]   Upload a training file at the specified path. Returns a file ID.
-tune [file id]       Queues a job for training / tuning. Returns a job ID.
-status [job id]      Fetches the status of a tuning job. Returns a model ID if training completed.
-help                 Print this help message
+moderation [file path]  Check if a training file doesn't violate moderation filters.
+upload [file path]      Upload a training file at the specified path. Returns a file ID.
+tune [file id]          Queues a job for training / tuning. Returns a job ID.
+status [job id]         Fetches the status of a tuning job. Returns a model ID if training completed.
+help                    Print this help message
 ```
 
 #### Uploading Training Data
