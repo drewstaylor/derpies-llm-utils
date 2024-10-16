@@ -32,7 +32,7 @@ async def check_moderation(filepath) -> None:
             if 'messages' in jsonl:
                 for message in jsonl['messages']:
                     if 'role' in message and 'content' in message:
-                        if message['role'] == 'assistant':
+                        if message['role'] == 'assistant' or message['role'] == 'system':
                             parsed = {"type": "text","text": message['content']}
                             inputs.append(parsed)
 
